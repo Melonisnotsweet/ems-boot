@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.pqz.emsboot.mapper.ClientMapper">
+    <!--<resultMap id="ClientListMap" type="cn.pqz.emsboot.entity.warehouse.Client">-->
+        <!--<id column="id1" property="id"/>-->
+        <!--<result column="name1" property="name"/>-->
+        <!--<result column="phone" property="phone"/>-->
+        <!--<result column="address" property="address"/>-->
+        <!--<result column="note" property="note"/>-->
+        <!--<collection property="orders" ofType="cn.pqz.emsboot.entity.warehouse.OrderList">-->
+            <!--<id column="id2" property="id"/>-->
+            <!--<id column="name2" property="name"/>-->
+            <!--<id column="orderNum" property="orderNum"/>-->
+            <!--<id column="price" property="price"/>-->
+            <!--<id column="count" property="count"/>-->
+            <!--<id column="pay" property="pay"/>-->
+            <!--<id column="transport" property="transport"/>-->
+        <!--</collection>-->
+    <!--</resultMap>-->
+    <!--<select id="getOrderByCid" resultMap="ClientListMap">-->
+        <!--select o.* from order_list o,client_order co where o.id=co.oid and co.cid=#{id}-->
+    <!--</select>-->
+</mapper>
