@@ -1,6 +1,6 @@
-package cn.pqz.emsboot.service;
+package cn.pqz.emsboot.service.system;
 
-import cn.pqz.emsboot.entity.User;
+import cn.pqz.emsboot.entity.system.User;
 import cn.pqz.emsboot.mapper.UserMapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;

@@ -1,7 +1,7 @@
 package cn.pqz.emsboot.util;
 
 
-import cn.pqz.emsboot.entity.User;
+import cn.pqz.emsboot.entity.system.User;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 /**

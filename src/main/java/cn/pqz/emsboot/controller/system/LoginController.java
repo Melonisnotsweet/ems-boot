@@ -1,6 +1,6 @@
-package cn.pqz.emsboot.controller;
+package cn.pqz.emsboot.controller.system;
 
-import cn.pqz.emsboot.entity.RespBean;
+import cn.pqz.emsboot.entity.system.RespBean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

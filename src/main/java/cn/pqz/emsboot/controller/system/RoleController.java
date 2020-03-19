@@ -1,11 +1,11 @@
-package cn.pqz.emsboot.controller;
+package cn.pqz.emsboot.controller.system;
 
-import cn.pqz.emsboot.entity.RespBean;
-import cn.pqz.emsboot.entity.Role;
+import cn.pqz.emsboot.entity.system.RespBean;
+import cn.pqz.emsboot.entity.system.Role;
 import cn.pqz.emsboot.mapper.Menu_roleMapper;
 import cn.pqz.emsboot.mapper.RoleMapper;
-import cn.pqz.emsboot.service.Menu_roleService;
-import cn.pqz.emsboot.service.RoleService;
+import cn.pqz.emsboot.service.system.Menu_roleService;
+import cn.pqz.emsboot.service.system.RoleService;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;

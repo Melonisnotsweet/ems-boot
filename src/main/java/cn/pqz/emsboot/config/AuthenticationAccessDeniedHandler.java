@@ -1,6 +1,6 @@
 package cn.pqz.emsboot.config;
 
-import cn.pqz.emsboot.entity.RespBean;
+import cn.pqz.emsboot.entity.system.RespBean;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;

@@ -1,6 +1,6 @@
-package cn.pqz.emsboot.service;
+package cn.pqz.emsboot.service.system;
 
-import cn.pqz.emsboot.entity.Menu_role;
+import cn.pqz.emsboot.entity.system.Menu_role;
 import cn.pqz.emsboot.mapper.Menu_roleMapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;

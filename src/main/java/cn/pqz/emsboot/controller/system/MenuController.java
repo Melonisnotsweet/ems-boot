@@ -1,11 +1,10 @@
-package cn.pqz.emsboot.controller;
+package cn.pqz.emsboot.controller.system;
 
-import cn.pqz.emsboot.entity.Menu;
-import cn.pqz.emsboot.entity.RespBean;
-import cn.pqz.emsboot.entity.Role;
+import cn.pqz.emsboot.entity.system.Menu;
+import cn.pqz.emsboot.entity.system.RespBean;
 import cn.pqz.emsboot.mapper.MenuMapper;
 import cn.pqz.emsboot.mapper.RoleMapper;
-import cn.pqz.emsboot.service.MenuService;
+import cn.pqz.emsboot.service.system.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,9 +34,9 @@ public class MenuController {
      * @return
      */
     @GetMapping("/staff/powList")
-    public RespBean allMenuList(){
+    public RespBean allMenuList(@RequestParam("query") String query){
         RespBean respBean=null;
-        List<Menu> allMenuList=menuService.allMenuList();
+        List<Menu> allMenuList=menuService.allMenuList(query);
         if (allMenuList==null){
             respBean=RespBean.error("获取权限列表失败");
         }else

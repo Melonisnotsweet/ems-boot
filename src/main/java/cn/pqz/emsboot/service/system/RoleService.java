@@ -1,6 +1,6 @@
-package cn.pqz.emsboot.service;
+package cn.pqz.emsboot.service.system;
 
-import cn.pqz.emsboot.entity.Role;
+import cn.pqz.emsboot.entity.system.Role;
 import cn.pqz.emsboot.mapper.RoleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

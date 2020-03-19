@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.pqz.emsboot.mapper.MenuMapper">
-    <resultMap id="BaseResultMap" type="cn.pqz.emsboot.entity.Menu">
+    <resultMap id="BaseResultMap" type="cn.pqz.emsboot.entity.system.Menu">
         <id property="id" column="id"/>
         <result property="pattern" column="pattern"/>
-        <collection property="roles" ofType="cn.pqz.emsboot.entity.Role">
+        <collection property="roles" ofType="cn.pqz.emsboot.entity.system.Role">
             <id property="id" column="rid"/>
             <result property="name" column="rname"/>
             <result property="nameZh" column="rnameZh"/>
         </collection>
     </resultMap>
-    <resultMap id="MenuListMap" type="cn.pqz.emsboot.entity.Menu">
+    <resultMap id="MenuListMap" type="cn.pqz.emsboot.entity.system.Menu">
         <id property="id" column="id1"/>
         <result property="path" column="path1"/>
         <result property="icon" column="icon1"/>
         <result property="level" column="level1"/>
         <result property="name" column="name1"/>
-        <collection property="children" ofType="cn.pqz.emsboot.entity.Menu">
+        <collection property="children" ofType="cn.pqz.emsboot.entity.system.Menu">
             <id property="id" column="id2"/>
             <result property="path" column="path2"/>
             <result property="icon" column="icon2"/>
@@ -35,8 +35,8 @@
         WHERE m1.id=m2.parentId and m1.enable=true and m2.enable=true ORDER BY m1.id,m2.id
     </select>
     <!--权限列表-->
-    <select id="allMenuList" resultType="cn.pqz.emsboot.entity.Menu">
-        select * from menu order by level asc
+    <select id="allMenuList" resultType="cn.pqz.emsboot.entity.system.Menu">
+        select * from menu where name like '%${name}%' order by level asc
     </select>
 
 </mapper>

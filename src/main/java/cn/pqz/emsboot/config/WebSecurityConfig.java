@@ -1,8 +1,8 @@
 package cn.pqz.emsboot.config;
 
-import cn.pqz.emsboot.entity.RespBean;
-import cn.pqz.emsboot.entity.User;
-import cn.pqz.emsboot.service.UserService;
+import cn.pqz.emsboot.entity.system.RespBean;
+import cn.pqz.emsboot.entity.system.User;
+import cn.pqz.emsboot.service.system.UserService;
 import cn.pqz.emsboot.util.UserUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;

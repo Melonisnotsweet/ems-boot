@@ -1,6 +1,6 @@
 package cn.pqz.emsboot.mapper;
 
-import cn.pqz.emsboot.entity.Menu_role;
+import cn.pqz.emsboot.entity.system.Menu_role;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

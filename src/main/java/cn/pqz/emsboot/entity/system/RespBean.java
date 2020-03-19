@@ -1,4 +1,4 @@
-package cn.pqz.emsboot.entity;
+package cn.pqz.emsboot.entity.system;
 
 /**
  * @作者 江南一点雨

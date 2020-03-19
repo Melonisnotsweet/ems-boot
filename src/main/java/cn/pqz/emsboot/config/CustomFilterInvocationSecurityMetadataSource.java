@@ -1,8 +1,8 @@
 package cn.pqz.emsboot.config;
 
-import cn.pqz.emsboot.entity.Menu;
-import cn.pqz.emsboot.entity.Role;
-import cn.pqz.emsboot.service.MenuService;
+import cn.pqz.emsboot.entity.system.Menu;
+import cn.pqz.emsboot.entity.system.Role;
+import cn.pqz.emsboot.service.system.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.ConfigAttribute;
 import org.springframework.security.access.SecurityConfig;
