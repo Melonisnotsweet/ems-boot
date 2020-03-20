@@ -5,8 +5,11 @@ import cn.pqz.emsboot.entity.warehouse.OrderList;
 import cn.pqz.emsboot.mapper.OrderMapper;
 import cn.pqz.emsboot.service.warehouse.OrderService;
 import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/order")
@@ -16,7 +19,14 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    @GetMapping("/orderList")
+    /**
+     * 获取订单列表
+     * @param pageNum
+     * @param size
+     * @param query
+     * @return
+     */
+    @GetMapping("/orderList/")
     public RespBean orderList(@RequestParam("pageNum") Integer pageNum,
                               @RequestParam("size") Integer size,
                               @RequestParam("query") String query){
@@ -28,6 +38,25 @@ public class OrderController {
         return respBean;
     }
 
+    /**
+     * 新建生产远程搜索
+     * @param name
+     * @return
+     */
+    @GetMapping("/orders")
+    public RespBean orders(@RequestParam String name){
+        RespBean respBean=null;
+        try{QueryWrapper queryWrapper=new QueryWrapper();
+        queryWrapper.eq("orderState",1);
+        queryWrapper.like("name",name);
+        List<OrderList> orders=orderMapper.selectList(queryWrapper);
+        respBean=RespBean.ok("",orders);
+        }catch (Exception e){
+            e.printStackTrace();
+            respBean=RespBean.error("获取失败");
+        }
+        return respBean;
+    }
     @PostMapping("/addOrder")
     public RespBean addOrder(@RequestBody JSONObject json){
         RespBean respBean=null;

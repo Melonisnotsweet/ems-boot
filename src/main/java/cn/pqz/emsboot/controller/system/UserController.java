@@ -34,7 +34,7 @@ public class UserController {
      * @param query
      * @return
      */
-    @GetMapping("/userList")
+    @GetMapping("/userList/")
     public RespBean userList(@RequestParam("pageNum") Integer pageNum,
                              @RequestParam("size") Integer size,
                              @RequestParam("query") String query){

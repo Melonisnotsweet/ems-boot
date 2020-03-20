@@ -33,7 +33,7 @@ public class MenuController {
      * 获取权限列表
      * @return
      */
-    @GetMapping("/staff/powList")
+    @GetMapping("/staff/powList/")
     public RespBean allMenuList(@RequestParam("query") String query){
         RespBean respBean=null;
         List<Menu> allMenuList=menuService.allMenuList(query);

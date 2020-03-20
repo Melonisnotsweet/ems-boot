@@ -5,8 +5,10 @@ import cn.pqz.emsboot.mapper.Menu_roleMapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class Menu_roleService{
     @Autowired
     private Menu_roleMapper menu_roleMapper;

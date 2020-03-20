@@ -27,7 +27,7 @@ public class ClientController {
      * @param name
      * @return
      */
-    @GetMapping("/clientList")
+    @GetMapping("/clientList/")
     public RespBean getClientList(@RequestParam("clientName") String name) {
         RespBean respBean = null;
         try {
